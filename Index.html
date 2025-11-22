@@ -1,116 +1,168 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Juntos para Sempre</title>
-    <link href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.vecteezy.com%2Farte-vetorial%2F16970577-logotipo-do-veterinario-da-cruz-medica-do-cavalo&psig=AOvVaw0jhagtRh-FbjxSti-reux7&ust=1763936257672000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLCUhenkhpEDFQAAAAAdAAAAABAL">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juntos para Sempre — Clínica Veterinária</title>
+  <meta name="description" content="Juntos para Sempre — Clínica Veterinária. Em construção. Em breve: consultas, cirurgias, vacinação e muito mais." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:,">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header class=" p-5">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="#">
+          <!-- Imagem do logo (preview local) -->
+          <img id="brand-logo" src="assets/logo-placeholder.png" alt="Juntos para Sempre — logo" />
+          <div class="brand-text">
+            <h1>Juntos para Sempre</h1>
+            <p class="tag">Clínica Veterinária</p>
+          </div>
+        </a>
+      </div>
 
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" alt="Logotipo da Tropicália" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>          
-        </nav>
-       
-    </header>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="material-de-construcao.html">Material de construção</a>
+        <!-- Link direto para a página do GitHub onde o usuário pode adicionar o arquivo de logo ao repositório -->
+        <a class="repo-upload" href="https://github.com/jesus1204/veterin-rio-Juntos-para-Sempre/new/main?filename=assets%2Flogo.png" target="_blank" rel="noopener">Enviar logo ao repositório</a>
+        <!-- Botão que abre o seletor de arquivo local para preview -->
+        <button id="uploadBtn" class="btn-upload" title="Selecionar um arquivo de imagem para pré-visualizar o logo">Carregar logo (pré-visualizar)</button>
+        <input id="logoInput" type="file" accept="image/*" style="display:none" />
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="container hero-card">
+        <div class="badge">Em construção</div>
+        <h2>Bem-vindo à Juntos para Sempre</h2>
+        <p class="lead">
+          Um espaço de cuidado com amor para seus bichinhos. Estamos construindo algo especial — em breve ofereceremos uma clínica completa com atendimento humanizado.
+        </p>
+        <a class="cta" href="#contato">Fale conosco</a>
+      </div>
+    </section>
 
-    <main class="container my-5">
+    <section id="sobre" class="section container">
+      <h3>Sobre nós</h3>
+      <p>
+        Juntos para Sempre é uma clínica veterinária dedicada ao bem-estar de animais de companhia. Nossa missão é oferecer atendimento de qualidade,
+        com carinho e profissionalismo. Enquanto o site está em construção, estamos organizando nossa estrutura para oferecer o melhor serviço.
+      </p>
+      <ul class="values">
+        <li><strong>Missão:</strong> Cuidar com respeito e empatia.</li>
+        <li><strong>Visão:</strong> Ser referência em atendimento veterinário local.</li>
+        <li><strong>Valores:</strong> Amor pelos animais, ética e transparência.</li>
+      </ul>
+    </section>
 
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/logo-2.png" alt="Logotipo secundário da Tropicália" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
+    <section id="servicos" class="section container">
+      <h3>Serviços que ofereceremos</h3>
+      <p>Em breve disponibilizaremos os seguintes serviços:</p>
 
-            </div>
-        </section>
+      <div class="services-grid">
+        <article class="service">
+          <h4>Consultas</h4>
+          <p>Avaliação clínica completa para cães e gatos.</p>
+        </article>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-            <div class="container d-flex align-items-center ">
-                  <div class="col-5">
-                    <h2>O que foi a Tropicália?</h2>
-                    <p class="p-2">A clinica veterinária Juntos para Sempre .</p>
-                </div>
-            </div>
-        </section>
+        <article class="service">
+          <h4>Vacinação</h4>
+          <p>Protocolos de vacinação atualizados e personalizados.</p>
+        </article>
 
-        <section id="galeria">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
+        <article class="service">
+          <h4>Cirurgias</h4>
+          <p>Procedimentos cirúrgicos com equipe qualificada.</p>
+        </article>
 
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <article class="service">
+          <h4>Emergência e Urgência</h4>
+          <p>Atendimento emergencial para casos críticos.</p>
+        </article>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Cadastre o seu bichinho</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite o nome dele completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                            </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Como o ṕodemos o chamar</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite o apelido do bichinho">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Nos conte um pouco mais sobre o bichinho"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="script.js"></script>
+        <article class="service">
+          <h4>Banho & Tosa</h4>
+          <p>Higiene e estética com cuidado e segurança.</p>
+        </article>
 
+        <article class="service">
+          <h4>Exames Laboratoriais</h4>
+          <p>Diagnóstico rápido para um tratamento mais eficaz.</p>
+        </article>
+
+        <article class="service">
+          <h4>Castração</h4>
+          <p>Procedimento com protocolos de segurança e recuperação.</p>
+        </article>
+
+        <article class="service">
+          <h4>Atendimento Domiciliar</h4>
+          <p>Visitas a domicílio para pacientes que necessitam.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact container">
+      <h3>Contato</h3>
+      <p>Quer saber mais ou agendar? Envie um e-mail ou telefone assim que estivermos pra valer.</p>
+      <p class="muted">E-mail: contato@juntosparasempre.example (placeholder)</p>
+      <p class="muted">Telefone: (00) 0 0000-0000 (placeholder)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Juntos para Sempre — Todos os direitos reservados.</p>
+      <p class="small muted">Site em construção</p>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Upload & preview do logo (client-side). O arquivo não é enviado ao servidor.
+    const uploadBtn = document.getElementById('uploadBtn');
+    const logoInput = document.getElementById('logoInput');
+    const brandLogo = document.getElementById('brand-logo');
+
+    // Carrega logo salvo no localStorage (se existir)
+    try {
+      const saved = localStorage.getItem('jps_logo_dataurl');
+      if (saved) brandLogo.src = saved;
+    } catch (e) {
+      // localStorage pode falhar em alguns modos; ignorar
+    }
+
+    uploadBtn.addEventListener('click', () => logoInput.click());
+
+    logoInput.addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (!file.type.startsWith('image/')) {
+        alert('Por favor, selecione um arquivo de imagem.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const dataUrl = ev.target.result;
+        brandLogo.src = dataUrl;
+        try {
+          localStorage.setItem('jps_logo_dataurl', dataUrl); // persiste localmente
+        } catch (err) {
+          // se localStorage falhar, apenas faça o preview
+          console.warn('Não foi possível salvar o logo no localStorage:', err);
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+  </script>
 </body>
-
 </html>
