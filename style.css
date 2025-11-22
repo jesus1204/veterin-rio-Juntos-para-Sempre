@@ -1,145 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-
-:root {
-    --laranja-claro: #FF862A;
+/* Estilos principais - fundo degradê azul suave e layout responsivo */
+:root{
+  --bg-1: #e9f6ff;
+  --bg-2: #d0eaff;
+  --accent: #1e90ff;
+  --card-bg: rgba(255,255,255,0.70);
+  --glass-border: rgba(255,255,255,0.6);
+  --muted: #576b7a;
+  --radius: 14px;
+  --max-width: 1100px;
+  --container-padding: 1.25rem;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
 }
 
-body {
-    font-size: 1rem;
-    font-family: 'Montserrat';
-
-    /* AQUI: fundo roxo degradê vertical suave */
-    background: linear-gradient(to bottom, #b48aff, #8f5aff);
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  min-height:100%;
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, #f0fbff 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:#063046;
+  line-height:1.5;
 }
 
-header {
-    background-color: #b48aff;
+/* Container */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding: var(--container-padding);
 }
 
-
-section {
-    padding-bottom: 5rem;
+/* Header */
+.site-header{
+  padding:0.5rem 0;
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  z-index:20;
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1{
+  margin:0;
+  font-size:1.15rem;
+  letter-spacing:0.2px;
+}
+.brand .tag{
+  margin:0;
+  font-size:0.8rem;
+  color:var(--muted);
 }
 
+/* Navigation */
+.nav a{
+  margin-left:1rem;
+  color:inherit;
+  text-decoration:none;
+  font-weight:600;
+  opacity:0.9;
+}
+.nav a:hover{color:var(--accent)}
 
-.nav-link {
-    color: #CB6D43;
-    font-weight: 600;
+/* Hero */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:4rem 0;
+  min-height:52vh;
+  background: radial-gradient(800px 300px at 10% 20%, rgba(30,144,255,0.06), transparent 10%),
+              radial-gradient(600px 200px at 90% 80%, rgba(0,122,255,0.04), transparent 10%);
+}
+.hero-card{
+  width:100%;
+  max-width:880px;
+  text-align:center;
+  padding:2.25rem;
+  border-radius:var(--radius);
+  background: var(--card-bg);
+  border:1px solid var(--glass-border);
+  box-shadow: 0 8px 30px rgba(8,32,50,0.06);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+.badge{
+  display:inline-block;
+  background:linear-gradient(90deg,#ffde7a,#ffd091);
+  color:#2b2b2b;
+  padding:0.35rem 0.6rem;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.85rem;
+  margin-bottom:0.75rem;
+  animation: pulse 2.6s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.03)}
+  100%{transform:scale(1)}
+}
+.hero-card h2{margin:0 0 0.5rem 0; font-size:1.8rem}
+.lead{color:#134b5b; margin:0 0 1rem 0}
+.cta{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:0.6rem 0.95rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(30,144,255,0.18);
 }
 
-.inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 100%;
-    height: 606px;
-    padding: 40px;
-    margin: 0 auto;
+/* Sections */
+.section{padding:2.25rem 0}
+.section h3{margin-top:0; font-size:1.25rem}
+.values{list-style:none; padding:0; margin:0.75rem 0 0 0}
+.values li{margin:0.4rem 0; color:var(--muted)}
+
+/* Services grid */
+.services-grid{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:1rem;
+  margin-top:1rem;
+}
+.service{
+  background:rgba(255,255,255,0.82);
+  border-radius:12px;
+  padding:1rem;
+  border:1px solid rgba(8,32,50,0.04);
+  box-shadow: 0 4px 18px rgba(6,30,45,0.04);
+}
+.service h4{margin:0 0 0.4rem 0}
+.service p{margin:0; color:var(--muted)}
+
+/* Contact / muted text */
+.muted{color:var(--muted)}
+.small{font-size:0.85rem}
+
+/* Footer */
+.site-footer{
+  padding:1.25rem 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.95rem;
+  border-top:1px solid rgba(8,32,50,0.03);
 }
 
-/* posicionamento para a imagem à direita */
-.img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
+/* Responsividade */
+@media (max-width:900px){
+  .services-grid{grid-template-columns: repeat(2,1fr)}
+  .hero-card h2{font-size:1.5rem}
 }
-
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
-.botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
-    height: 3em;
-    /* Convertido para em */
-    align-content: center;
-
-}
-
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
-}
-
-
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
-}
-
-
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
-}
-
-#galeria {
-    background-color: #FAF4F4;
-
-}
-
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
-}
-
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
-}
-
-.formulario {
-    background-color: #ffffff;
-    padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
-    border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
-    font-weight: bold;
-}
-
-.formulario button {
-    background-color: #CB6D43;
-    border: none;
-    font-weight: bold;
-}
-
-/* chama classe do bootstrap para modificar a cor */
-.form-control {
-    background-color: #F1EDEF;
+@media (max-width:600px){
+  .header-inner{flex-direction:column; align-items:flex-start; gap:0.5rem}
+  .nav a{margin-left:0.6rem}
+  .services-grid{grid-template-columns:1fr}
+  .hero{padding:2.25rem 0}
+  .hero-card{padding:1.25rem}
 }
