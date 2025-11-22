@@ -7,32 +7,20 @@
   <meta name="description" content="Juntos para Sempre — Clínica Veterinária. Em construção. Em breve: consultas, cirurgias, vacinação e muito mais." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:,">
+  <!-- Fonte suave -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a class="brand-link" href="#">
-          <!-- Imagem do logo (preview local) -->
-          <img id="brand-logo" src="assets/logo-placeholder.png" alt="Juntos para Sempre — logo" />
-          <div class="brand-text">
-            <h1>Juntos para Sempre</h1>
-            <p class="tag">Clínica Veterinária</p>
-          </div>
-        </a>
+        <h1>Juntos para Sempre</h1>
+        <p class="tag">Clínica Veterinária</p>
       </div>
-
       <nav class="nav">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
-        <a href="material-de-construcao.html">Material de construção</a>
-        <!-- Link direto para a página do GitHub onde o usuário pode adicionar o arquivo de logo ao repositório -->
-        <a class="repo-upload" href="https://github.com/jesus1204/veterin-rio-Juntos-para-Sempre/new/main?filename=assets%2Flogo.png" target="_blank" rel="noopener">Enviar logo ao repositório</a>
-        <!-- Botão que abre o seletor de arquivo local para preview -->
-        <button id="uploadBtn" class="btn-upload" title="Selecionar um arquivo de imagem para pré-visualizar o logo">Carregar logo (pré-visualizar)</button>
-        <input id="logoInput" type="file" accept="image/*" style="display:none" />
       </nav>
     </div>
   </header>
@@ -127,42 +115,6 @@
   <script>
     // Atualiza ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Upload & preview do logo (client-side). O arquivo não é enviado ao servidor.
-    const uploadBtn = document.getElementById('uploadBtn');
-    const logoInput = document.getElementById('logoInput');
-    const brandLogo = document.getElementById('brand-logo');
-
-    // Carrega logo salvo no localStorage (se existir)
-    try {
-      const saved = localStorage.getItem('jps_logo_dataurl');
-      if (saved) brandLogo.src = saved;
-    } catch (e) {
-      // localStorage pode falhar em alguns modos; ignorar
-    }
-
-    uploadBtn.addEventListener('click', () => logoInput.click());
-
-    logoInput.addEventListener('change', (e) => {
-      const file = e.target.files && e.target.files[0];
-      if (!file) return;
-      if (!file.type.startsWith('image/')) {
-        alert('Por favor, selecione um arquivo de imagem.');
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        const dataUrl = ev.target.result;
-        brandLogo.src = dataUrl;
-        try {
-          localStorage.setItem('jps_logo_dataurl', dataUrl); // persiste localmente
-        } catch (err) {
-          // se localStorage falhar, apenas faça o preview
-          console.warn('Não foi possível salvar o logo no localStorage:', err);
-        }
-      };
-      reader.readAsDataURL(file);
-    });
   </script>
 </body>
 </html>
